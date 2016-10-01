@@ -1,0 +1,1158 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei";
+    font-size: 14px;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+input{
+    outline: none;
+}
+.clear:after{
+    clear: both;
+    display: block;
+    content: "";
+    height: 0;
+}
+.middle{
+    margin: 0 auto;
+    width: 1200px;
+}/*版心*/
+
+/*默认样式*/
+
+.hiddenHead{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 0;
+    background: rgba(0,0,0,.8);
+    overflow: hidden;
+    z-index: 9999;
+}
+.hiddenHead .hiddenLogo{
+    float: left;
+    width: 152px;
+    height: 38px;
+    margin-top: 6px;
+    background: url("../img/hiddenLogo.png") no-repeat 0 0;
+}
+.hiddenSearch{
+    float: left;
+    margin: 6px 0 0 99px;
+    width: 652px;
+}
+.hiddenSearch .searchBox{
+    width: 652px;
+    height: 35px;
+}
+.hiddenSearch .searchBox input{
+    width: 510px;
+    border-radius: 5px 0 0 5px;
+}
+.hiddenSearch .searchBox .button{
+    width: 70px;
+    height: 33px;
+    background-color: #f46;
+    border: 1px solid #333;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+/*隐藏导航栏*/
+
+.rightNav{
+    position: fixed;
+    top:0;
+    right:0;
+    width: 30px;
+    height: 100%;
+    background: #202020;
+}
+.rightNav .vacancy{
+    width: 30px;
+    height: 100px;
+}
+.rightNav .rightCon a{
+    display: block;
+    padding: 4px 4px 12px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid rgba(221,221,221,.6);
+
+}
+.rightNavBg{
+    background: url("../img/hiddenIcon.png") no-repeat;
+}
+.rightNav .rightCon a i{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.rightNav .rightCon a span{
+    display: block;
+    line-height: 15px;
+    font-size: 12px;
+}
+.rightNav .rightCon a .car{
+    background-position: -4px 0;
+}
+.rightNav .rightCon a .coupon{
+    background-position: -4px -30px;
+}
+.rightNav .rightCon a .purse{
+    background-position: -4px -90px;
+}
+.rightNav .rightCon a .track{
+    background-position: -4px -60px;
+}
+.rightNav .toTop{
+    opacity:0;
+    position: absolute;
+    left:0;
+    bottom:10px;
+    width: 30px;
+}
+.rightNav .toTop a{
+    display: block;
+    padding: 4px 4px 0;
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid rgba(221,221,221,.6);
+}
+.rightNav .toTop a .TOP{
+    width: 22px;
+    height: 30px;
+    display: block;
+    background-position: -3px -150px;
+}
+.rightNav a:hover{
+    background: red;
+}
+/*右侧侧边栏*/
+
+.header{
+    width: 100%;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+}
+.head{
+    position: relative;
+    height: 30px;
+}
+/*头部整体导航栏*/
+
+.head .nav{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 10;
+}
+/*头部右侧导航菜单样式*/
+.bg{
+    background:url("../img/navBg.png") no-repeat;
+}
+/*导航背景图片*/
+
+.nav div{
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+}
+.nav div:before{
+    position: absolute;
+    top:9px;
+    left: 0;
+    content: "";
+    width: 2px;
+    height: 12px;
+    background: #ddd;
+}
+.nav div i{
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    top: 14px;
+    right: 0;
+    background: url("../img/navTriangle.png") no-repeat 0 0;
+}
+.nav div>a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+/*导航菜单公共样式*/
+
+.logIn a{
+    float: left;
+}
+.logIn a.entry{
+    margin-right: 15px;
+}
+.nav div.logIn:before{
+    content: "";
+    width: 0;
+}
+/*登录注册样式及伪类（竖线清除）*/
+
+.nav div.order a,.nav div.cart a{
+    padding-left: 38px;
+}/*我的订单和购物车公共样式*/
+
+.nav div.order{
+    background-position: 20px -213px;
+}/*我的订单*/
+
+.nav div.cart{
+    background-position: 12px -104px;
+}
+.nav div.cart .hiddenCart{
+    display: none;
+    position: absolute;
+    top:30px;
+    left:-90px;
+    width: 200px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    color: #999;
+    background:#f2f2f2;
+    border: 1px solid #ddd;
+    border-top:none;
+    border-radius: 0 0 10px 10px;
+    z-index: 5;
+}
+.nav div.cart:hover .hiddenCart{
+    display: block;
+}
+/*购物车样式以及隐藏菜单样式*/
+
+.nav div.custom a{
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.nav div.custom .customList{
+    width: 100px;
+}
+/*客户服务*/
+
+.nav div.store{
+    margin-right: 0;
+    padding-left: 35px;
+    padding-right: 10px;
+    background-position: 12px -252px;
+}
+.nav div.store .storeList{
+    width: 90px;
+}
+/*我的小店*/
+
+.nav div ul li a{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    color: #444;
+}
+.hidden{
+    display: none;
+    position: absolute;
+    top:30px;
+    left: 0;
+    padding-bottom: 2px;
+    background:#eee;
+    border: 1px solid #ddd;
+    border-top:none;
+    border-radius: 0 0 10px 10px;
+}
+.nav div:hover .hidden{
+    display: block;
+}
+/*客户服务和我的小店隐藏菜单及hover效果*/
+
+/***********************头部导航END！！！******************/
+
+
+.header-box{
+    height: 144px;
+}
+
+.logo{
+    float: left;
+    padding-top: 37px;
+}
+.logo a{
+    display: block;
+    width: 250px;
+    height: 60px;
+    background: url("../img/logo.png") no-repeat 0 0;
+}
+
+.search{
+    float: left;
+    width: 600px;
+    padding-top:40px;
+    padding-left: 100px;
+    height: 60px;
+    text-align: center;
+}
+.searchBox{
+    position: relative;
+    width: 500px;
+    height: 60px;
+}
+.searchBox input{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 338px;
+    padding-left: 90px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #333;
+}
+.searchBox>a{
+    display: block;
+    position: absolute;
+    top:0;
+    width: 70px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.searchBox a.shops{
+    left:0;
+}
+.searchBox a.button{
+    right:0;
+    background-color: #3a3a3a;
+    background-position: 27px -57px;
+}
+.searchBox a.shops i{
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    top: 16px;
+    right: 0;
+    background: url("../img/navTriangle.png") no-repeat 0 0;
+}
+.searchBox .hotList{
+    position: absolute;
+    left: -10px;
+    top: 35px;
+    margin-top:5px;
+    width: 518px;
+    overflow: hidden;
+}
+.hotList a{
+    float: left;
+    padding:0 10px;
+    height: 19px;
+    line-height: 19px;
+    font-size: 12px;
+    color: #999;
+}
+
+.EWM{
+    position: relative;
+    float: right;
+    width: 250px;
+    height: 144px;
+    background: url("../img/ewmBg.gif") no-repeat;
+}
+.EWM img{
+    position: absolute;
+    top: 57px;
+    left: 106px;
+    width: 83px;
+    height: 83px;
+}
+
+/********************logo、搜索、二维码  END!!!***********************/
+
+.menu{
+    width: 100%;
+    border-top:1px solid #f46;
+}
+.conBox{
+    position: relative;
+}
+.wrap{
+    position: absolute;
+    top:-36px;
+    left: 0;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 600;
+}
+.wrap span{
+    float: left;
+    margin-right: 30px;
+    width: 225px;
+    text-align: center;
+    color: #fff;
+    background: #f46;
+    border-radius: 5px 5px 0 0;
+}
+.wrap a{
+    float: left;
+    padding: 0 30px;
+    text-align: center;
+    color: #333;
+}
+.wrap a:hover{
+    text-decoration: underline;
+}
+/*全部商品 团购 快抢区域*/
+
+.asideNav{
+    position: relative;
+    float: left;
+    width: 223px;
+    border: 1px solid red;
+    border-top: none;
+    height: 549px;
+    z-index: 10;
+}
+.asideNav a.color{
+    color: #f46;
+}
+.asideNav a:hover{
+    text-decoration: underline;
+}
+/*左侧导航及a标签hover样式*/
+
+.asideBox>li{
+    padding:0  15px;
+    width: 193px;
+    overflow: hidden;
+}
+.asideBox>li:hover{
+    width: 223px;
+    padding: 0;
+}
+.asideBox>li:hover .navBox{
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none ;
+}
+.asideBox>li.lastLI:hover .navBox{
+    border-bottom: none;
+}
+.asideBox>li .navBox{
+    position: relative;
+    background: #fff;
+    z-index: 10;
+    overflow: hidden;
+    height: 39px;
+}
+.asideBox>li .navBox span,.asideBox>li .navBox>a{
+    float: left;
+    height:39px;
+    line-height: 39px;
+}
+.asideBox>li .navBox span a{
+    display: block;
+    width: 42px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+.asideBox>li .navBox>a{
+    position: relative;
+    font-size: 12px;
+    padding-right: 10px;
+}
+.asideBox>li .navBox>a:after{
+    position: absolute;
+    top:13px;
+    right: 5px;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+}
+.asideBox>li .navBox>a.clearAfter:after{
+    position: absolute;
+    top:13px;
+    right: 5px;
+    content: "";
+    width: 0;
+}
+/*左侧导航菜单样式*/
+
+.asideBox>li .hiddenNav{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 222px;
+    height: 528px;
+    padding-bottom: 20px;
+    width: 290px;
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 5;
+}
+.asideBox>li .hiddenNav div{
+    width: 250px;
+    margin: 14px 20px 20px;
+    padding-bottom: 20px;
+    max-height: 90px;
+    overflow: hidden;
+}
+.asideBox>li .hiddenNav div span{
+    display: block;
+}
+.asideBox>li .hiddenNav div span a{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+.asideBox>li .hiddenNav div li a{
+    float: left;
+    margin: 12px 20px 0 0;
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+}
+.asideBox>li .hiddenNav div.hotAd{
+    padding-bottom: 0;
+    max-height: 130px;
+}
+.asideBox>li .hiddenNav div.hotAd img{
+    width: 100%;
+    height: 130px;
+}
+.asideBox>li:hover .hiddenNav{
+    display: block;
+}
+/*左侧导航隐藏菜单样式*/
+
+.content{
+    position: relative;
+    float: left;
+}
+.content .banner{
+    float: left;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 715px;
+    height: 530px;
+    overflow: hidden;
+}
+.content .banner .bannerIn{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 5005px;
+}
+.content .banner .bannerIn a{
+    float: left;
+    width: 715px;
+    height: 530px;
+}
+.content .banner .bannerIn a img{
+    width: 100%;
+    height: 100%;
+}
+/*轮播图*/
+
+.content .bannerBg{
+    background: url("../img/bannerBg.png") no-repeat;
+}
+.content .banner>a{
+    display: none;
+    position: absolute;
+    top:50%;
+    margin-top: -23px;
+    width: 28px;
+    height: 45px;
+    opacity: .4;
+    z-index: 5;
+}
+.content .banner>a:hover{
+    opacity: 1;
+}
+.content .banner a.btnL{
+    left:0;
+    background-position: 0 0;
+}
+.content .banner a.btnR{
+    right:0;
+    background-position: -50px 0;
+}
+/*轮播图左右隐藏按钮*/
+
+.content .bannerBtn{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+    right:0;
+    margin-left: -76px;
+    width: 152px;
+    padding: 5px 10px;
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    z-index: 10;
+}
+.content .bannerBtn li{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    background:#ddd;
+    cursor: pointer;
+}
+.content .bannerBtn li.btnColor{
+    background:#f46;
+}
+/*轮播图底部焦点按钮*/
+
+.content .right{
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 218px;
+    height: 528px;
+    border: 1px solid #ddd;
+}
+.content .right div{
+    padding: 20px;
+}
+.content .right div a,.content .right div a img{
+    display: block;
+    width: 180px;
+    height: 220px;
+}
+.content .right .split{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width:180px;
+    margin-top: -3px;
+    border-bottom: 1px dashed #ddd;
+}
+/*右侧边栏上下图片*/
+
+/******************轮播图及左右侧边区域  END!!!****************************/
+
+.con{
+    margin-top: 80px;
+}
+.buy-limit{
+    height: 300px;
+    border-top:1px solid #333;
+}
+.count-down{
+    position: relative;
+    float: left;
+    width: 225px;
+    height: 295px;
+    margin-right: 20px;
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 5px solid #f46;
+}
+.count-down a{
+    display: block;
+    width: 223px;
+    height: 295px;
+    border: 1px solid #ddd;
+    border-top:none;
+    border-bottom: none;
+}
+.count-down a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*底部图片*/
+
+.count-down .count{
+    position: absolute;
+    top:24px;
+    left: 10px;
+    color: #f46;
+
+}
+.count-down .count span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background: #f46;
+    vertical-align: top;
+}
+.count-down .count span.text{
+    width: 100px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 20px;
+    color: #f46;
+    background: #fff;
+}
+.count-down .count span.colon{
+    width: 5px;
+    color: #f46;
+    background: #fff;
+}
+/*限时抢购倒计时*/
+
+.count-down .countBg{
+    position: absolute;
+    right:15px;
+    bottom: 16px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    background: url("../img/buy-limitBg.png") no-repeat 0 -310px;
+
+}
+.count-down .countBg span{
+    display: block;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.count-down .countBg .text1{
+    padding-top: 20px;
+}
+/*9元抢购*/
+
+.group{
+    float: left;
+    width: 575px;
+    height: 300px;
+}
+.group a{
+    float: left;
+}
+.group a.imgL{
+    width: 335px;
+    height: 300px;
+}
+.group a.imgR{
+    width: 240px;
+    height: 300px;
+}
+.group a img{
+    width: 100%;
+    height: 100%;
+}
+/*特卖团购*/
+
+.adR{
+    position: relative;
+    float: right;
+    width: 360px;
+    height: 300px;
+}
+.adR a{
+    position: absolute;
+    left: 0;
+    width: 360px;
+    height: 145px;
+}
+.adR a img{
+    width: 100%;
+    height: 100%;
+}
+.adR a.top{
+    top:0;
+}
+.adR a.bottom{
+    bottom:0;
+}
+/*右侧图片*/
+
+/**********限时抢购、团购、超值区域  END!!!*******/
+
+.goods .head{
+    padding: 15px 0;
+}
+.areaBg{
+    background: url("../img/area.png") repeat;
+}
+.goods .head span{
+    float: left;
+    height: 11px;
+}
+.goods .head .headL{
+    float: left;
+}
+.goods .head .headR{
+    float: right;
+}
+.goods .head .headL,.goods .head .headR{
+    width: 492px;
+    height: 11px;
+    padding-top: 11px;
+}
+.bgT{
+    width: 12px;
+    background-position: 0 0;
+}
+.bgM{
+    width: 468px;
+    background-position: 0 -12px;
+}
+.bgR{
+    width: 12px;
+    background-position: 0 -24px;
+}
+.goods .head h3{
+    float: left;
+    width: 186px;
+    padding: 0 15px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 24px;
+    text-align: center;
+}
+/*展示区头部*/
+
+.goodsCon{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.goodsCon .left{
+    float: left;
+    width: 223px;
+    height: 498px;
+    border: 1px solid #ddd;
+}
+.goodsCon .left .leftImg{
+    background-color: #fbfbfb;
+    overflow: hidden;
+}
+.goodsCon .left .leftImg .imgAd{
+    margin: 17px auto 7px;
+    width: 176px;
+    height: 176px;
+    overflow: hidden;
+}
+.goodsCon .left .leftImg .imgT{
+    margin-bottom: 0;
+}
+/*左边栏图片*/
+.goodsCon .left ul{
+    margin:0 auto;
+    width: 210px;
+}
+.goodsCon .left ul li{
+    float: left;
+    margin: 10px 0 0;
+    height: 20px;
+    width: 70px;
+    text-align: center;
+}
+.goodsCon .left ul li a{
+    display: block;
+    margin: 0 auto;
+    padding: 0 4px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    border: 1px solid transparent;
+    border-radius: 1px;
+}
+.goodsCon .left ul li a:hover{
+    border-color: #ddd;
+}
+/*左边栏底部文字区*/
+
+.goodsR{
+    float:right;
+    width:955px;
+}
+.goodsR .areaImg{
+    margin-bottom: 20px;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+}
+.goodsR .areaImg ul{
+    width: 1000px;
+    height: 330px;
+    overflow: hidden;
+}
+.goodsR .areaImg ul li{
+    float: left;
+    margin-right: 20px;
+    width: 305px;
+    height: 330px;
+}
+.goodsR .areaImg ul li a,.goodsR .areaImg ul li a img{
+    display: block;
+    width: 305px;
+    height: 330px;
+}
+/*右侧顶部图片展示区*/
+
+.goodsCon .present{
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+}
+.goodsCon .present ul{
+    width: 1000px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.goodsCon .present ul li{
+    float: left;
+    margin-right: 20px;
+}
+.goodsCon .present ul li a{
+    display: block;
+    width: 305px;
+    height: 150px;
+}
+.goodsCon .present ul li a img{
+    float: left;
+    height: 150px;
+    width: 130px;
+}
+.goodsCon .present ul li a .text{
+    float: right;
+    width: 165px;
+    font-size: 14px;
+    padding-top: 50px;
+}
+.present ul li a .text span{
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    color: #333;
+}
+.present ul li a .text span.color{
+    color: #999;
+}
+/*右侧底部展示介绍*/
+
+/************************展示区1  END！！！***********************/
+
+
+.goodsCon .clearBorder{
+    border: none;
+}
+.goodsCon .left .bgImg a{
+    display: block;
+    margin-bottom: -1px;
+    width: 223px;
+    height: 254px;
+    border: 1px solid #ddd;
+}
+.goodsCon .left .bgImg a img{
+    display: block;
+    margin: 20px auto 0;
+    width: 183px;
+    height: 213px;
+}
+.goodsCon .left .brand{
+    border-left: 1px solid #ddd;
+    width: 225px;
+    padding-left: 1px;
+    margin-left: -2px;
+}
+.goodsCon .left .brand a{
+    float: left;
+    margin: 0 -1px -1px 0;
+    width: 111px;
+    height: 60px;
+    border: 1px solid #ddd;
+    text-align: center;
+
+}
+.goodsCon .left .brand a img{
+    display: block;
+    width: 111px;
+    height: 60px;
+}
+.goodsCon .left .brand:hover{
+    background: #ddd;
+}
+/*品牌站左边栏*/
+
+.brandCon .brandConL{
+    float: left;
+}
+.brandCon .brandConL a,.brandCon .brandConL a img{
+    display: block;
+    width: 305px;
+    height: 500px;
+}
+.brandCon .brandConR{
+    float: right;
+    width: 650px;
+    height: 500px;
+    margin-right: -1px;
+}
+.brandCon .brandConR a{
+    float: left;
+    margin: 0 0 -1px -1px;
+    width: 215px;
+    height: 248px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+}
+.brandCon .brandConR a img{
+    display: block;
+    margin: 20px auto 20px;
+    width: 175px;
+    height: 170px;
+}
+.brandCon .brandConR a span{
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+.brandCon .brandConR a:hover{
+    text-decoration: underline;
+}
+/*品牌站右侧展示栏*/
+
+/************************展示区2 END！！！***************************/
+
+.mgjFooter{
+    margin-top: 90px;
+    width: 100%;
+    height: 200px;
+    padding-bottom: 20px;
+    background:url("../img/footerBg.png") repeat-x center top;
+    background-color: #fbfbfb ;
+}
+.footer{
+    padding: 30px 0 6px 1px;
+}
+.footer .left{
+    float: left;
+    width: 246px;
+    overflow: hidden;
+}
+.footer .left .Logo{
+    display: block;
+    height: 38px;
+    background: url("../img/footerLogo.png") no-repeat 0 0;
+}
+.footer .info{
+    margin-top: 2px;
+}
+.footer .info p{
+    margin-top: 5px;
+}
+.info p,.info p span,.info p a{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #999;
+}
+.info p.police,.info p.police img,.info p.police span{
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+/*底部左侧营业执照等信息*/
+
+.footer .right{
+    float: left;
+    margin-left: -30px;
+}
+.footer .right .list{
+    float: left;
+    margin-left: 121px;
+    padding-bottom: 15px;
+}
+.footer .right .list span,.footer .right .list a{
+    display: block;
+    height: 14px;
+    line-height: 14px;
+}
+.footer .right .list span{
+    padding-bottom: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+.footer .right .list a{
+    margin-top: 8px;
+    font-size: 12px;
+}
+.footer .right .list a:hover{
+    text-decoration: underline;
+}
+.footer .right .authority a{
+    display: inline-block;
+    height: 28px;
+    vertical-align: top;
+    background: url("../img/footerIcon.png") no-repeat;
+}
+.footer .right .authority a.iconL{
+    width: 150px;
+    background-position: -252px -50px;
+}
+.footer .right .authority a.iconR{
+    width: 84px;
+    background-position: -400px -50px;
+}
+/*右侧链接*/
+
+.blogRoll{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    border-top: 1px solid #e5e5e5;
+}
+.blogRoll span,.blogRoll a{
+    float: left;
+    color: #4d4d4d;
+    font-size: 12px;
+    padding: 0 14px;
+}
+.blogRoll span{
+    padding: 0;
+}
+.blogRoll a:hover{
+    color: #f46;
+    text-decoration: underline;
+}
+/*友情链接*/
+
+/*******************网页底部样式  END !!!!*************************/
